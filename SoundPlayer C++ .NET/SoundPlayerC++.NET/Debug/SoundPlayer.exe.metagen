@@ -1,0 +1,398 @@
+  SoundPlayer.PlayerForm.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly SoundPlayer, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Struct libZPlay.TStreamHMSTime: AutoLayout, AnsiClass, Class, Public, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    UInt32 hour : Public
+    UInt32 minute : Public
+    UInt32 second : Public
+    UInt32 millisecond : Public
+Struct libZPlay.TStreamTime: AutoLayout, AnsiClass, Class, Public, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    UInt32 sec : Public
+    UInt32 ms : Public
+    UInt32 samples : Public
+    libZPlay.TStreamHMSTime hms : Public
+Struct libZPlay.TStreamInfo: AutoLayout, AnsiClass, Class, Public, ExplicitLayout, Sealed, UnicodeClass, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 SamplingRate : Public
+    Int32 ChannelNumber : Public
+    Boolean VBR : Public
+    Int32 Bitrate : Public
+    libZPlay.TStreamTime Length : Public
+    System.String Description : Public
+Struct libZPlay.TWaveOutInfo: AutoLayout, AnsiClass, Class, Public, ExplicitLayout, Sealed, UnicodeClass, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    UInt32 ManufacturerID : Public
+    UInt32 ProductID : Public
+    UInt32 DriverVersion : Public
+    UInt32 Formats : Public
+    UInt32 Channels : Public
+    UInt32 Support : Public
+    System.String ProductName : Public
+Struct libZPlay.TWaveInInfo: AutoLayout, AnsiClass, Class, Public, ExplicitLayout, Sealed, UnicodeClass, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    UInt32 ManufacturerID : Public
+    UInt32 ProductID : Public
+    UInt32 DriverVersion : Public
+    UInt32 Formats : Public
+    UInt32 Channels : Public
+    System.String ProductName : Public
+Struct libZPlay.TStreamLoadInfo: AutoLayout, AnsiClass, Class, Public, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    UInt32 NumberOfBuffers : Public
+    UInt32 NumberOfBytes : Public
+Struct libZPlay.TEchoEffect: AutoLayout, AnsiClass, Class, Public, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 nLeftDelay : Public
+    Int32 nLeftSrcVolume : Public
+    Int32 nLeftEchoVolume : Public
+    Int32 nRightDelay : Public
+    Int32 nRightSrcVolume : Public
+    Int32 nRightEchoVolume : Public
+Struct libZPlay.TStreamStatus: AutoLayout, AnsiClass, Class, Public, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Boolean fPlay : Public
+    Boolean fPause : Public
+    Boolean fEcho : Public
+    Boolean fEqualizer : Public
+    Boolean fVocalCut : Public
+    Boolean fSideCut : Public
+    Boolean fChannelMix : Public
+    Boolean fSlideVolume : Public
+    Int32 nLoop : Public
+    Boolean fReverse : Public
+    Int32 nSongIndex : Public
+    Int32 nSongsInQueue : Public
+Struct libZPlay.TID3Info: AutoLayout, AnsiClass, Class, Public, ExplicitLayout, Sealed, UnicodeClass, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    System.String Title : Public
+    System.String Artist : Public
+    System.String Album : Public
+    System.String Year : Public
+    System.String Comment : Public
+    System.String Track : Public
+    System.String Genre : Public
+Struct libZPlay.TID3Picture: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Boolean PicturePresent : Public
+    Int32 PictureType : Public
+    System.String Description : Public
+    System.Drawing.Bitmap Bitmap : Public
+    System.IO.MemoryStream BitStream : Public
+Struct libZPlay.TID3InfoEx: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    System.String Title : Public
+    System.String Artist : Public
+    System.String Album : Public
+    System.String Year : Public
+    System.String Comment : Public
+    System.String Track : Public
+    System.String Genre : Public
+    System.String AlbumArtist : Public
+    System.String Composer : Public
+    System.String OriginalArtist : Public
+    System.String Copyright : Public
+    System.String URL : Public
+    System.String Encoder : Public
+    System.String Publisher : Public
+    Int32 BPM : Public
+    libZPlay.TID3Picture Picture : Public
+Class libZPlay.ZPlay: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    GetWaveOutInfo(UInt32, TWaveOutInfo&): PrivateScope, Public, HideBySig
+    SetWaveOutDevice(UInt32): PrivateScope, Public, HideBySig
+    EnumerateWaveIn(): PrivateScope, Public, HideBySig
+    GetWaveInInfo(UInt32, TWaveInInfo&): PrivateScope, Public, HideBySig
+    SetWaveInDevice(UInt32): PrivateScope, Public, HideBySig
+    SetSettings(TSettingID, Int32): PrivateScope, Public, HideBySig
+    GetSettings(TSettingID): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+    GetVersion(): PrivateScope, Public, HideBySig
+    GetError(): PrivateScope, Public, HideBySig
+    GetFileFormat(String): PrivateScope, Public, HideBySig
+    OpenFile(String, TStreamFormat): PrivateScope, Public, HideBySig
+    SetWaveOutFile(String, TStreamFormat, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    AddFile(String, TStreamFormat): PrivateScope, Public, HideBySig
+    OpenStream(Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Byte[]&, UInt32, TStreamFormat): PrivateScope, Public, HideBySig
+    PushDataToStream(Byte[]&, UInt32): PrivateScope, Public, HideBySig
+    IsStreamDataFree(Byte[]&): PrivateScope, Public, HideBySig
+    Close(): PrivateScope, Public, HideBySig
+    GetPosition(TStreamTime&): PrivateScope, Public, HideBySig
+    Seek(TTimeFormat, TStreamTime&, TSeekMethod): PrivateScope, Public, HideBySig
+    ReverseMode(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    PlayLoop(TTimeFormat, TStreamTime&, TTimeFormat, TStreamTime&, UInt32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    StartPlayback(): PrivateScope, Public, HideBySig
+    StopPlayback(): PrivateScope, Public, HideBySig
+    PausePlayback(): PrivateScope, Public, HideBySig
+    ResumePlayback(): PrivateScope, Public, HideBySig
+    SetEqualizerParam(Int32, Int32[]&, Int32): PrivateScope, Public, HideBySig
+    GetEqualizerParam(Int32&, Int32[]&): PrivateScope, Public, HideBySig
+    EnableEqualizer(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetEqualizerPreampGain(Int32): PrivateScope, Public, HideBySig
+    GetEqualizerPreampGain(): PrivateScope, Public, HideBySig
+    SetEqualizerBandGain(Int32, Int32): PrivateScope, Public, HideBySig
+    GetEqualizerBandGain(Int32): PrivateScope, Public, HideBySig
+    SetEqualizerPoints(Int32[]&, Int32): PrivateScope, Public, HideBySig
+    GetEqualizerPoints(Int32[]&): PrivateScope, Public, HideBySig
+    EnableEcho(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetEchoParam(TEchoEffect[]&, Int32): PrivateScope, Public, HideBySig
+    GetEchoParam(TEchoEffect[]&): PrivateScope, Public, HideBySig
+    SetMasterVolume(Int32, Int32): PrivateScope, Public, HideBySig
+    SetPlayerVolume(Int32, Int32): PrivateScope, Public, HideBySig
+    GetMasterVolume(Int32&, Int32&): PrivateScope, Public, HideBySig
+    GetPlayerVolume(Int32&, Int32&): PrivateScope, Public, HideBySig
+    SlideVolume(TTimeFormat, TStreamTime&, Int32, Int32, TTimeFormat, TStreamTime&, Int32, Int32): PrivateScope, Public, HideBySig
+    SetPitch(Int32): PrivateScope, Public, HideBySig
+    GetPitch(): PrivateScope, Public, HideBySig
+    SetRate(Int32): PrivateScope, Public, HideBySig
+    GetRate(): PrivateScope, Public, HideBySig
+    SetTempo(Int32): PrivateScope, Public, HideBySig
+    GetTempo(): PrivateScope, Public, HideBySig
+    GetBitrate(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    LoadID3(TID3Version, TID3Info&): PrivateScope, Public, HideBySig
+    LoadID3Ex(TID3InfoEx&, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    LoadFileID3(String, TStreamFormat, TID3Version, TID3Info&): PrivateScope, Public, HideBySig
+    LoadFileID3Ex(String, TStreamFormat, TID3InfoEx&, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetCallbackFunc(TCallbackFunc, TCallbackMessage, Int32): PrivateScope, Public, HideBySig
+    DetectBPM(TBPMDetectionMethod): PrivateScope, Public, HideBySig
+    DetectFileBPM(String, TStreamFormat, TBPMDetectionMethod): PrivateScope, Public, HideBySig
+    GetFFTData(Int32, TFFTWindow, Int32&, Int32[]&, Int32[]&, Int32[]&, Int32[]&, Int32[]&): PrivateScope, Public, HideBySig
+    DrawFFTGraphOnHDC(IntPtr, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    DrawFFTGraphOnHWND(IntPtr, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    SetFFTGraphParam(TFFTGraphParamID, Int32): PrivateScope, Public, HideBySig
+    GetFFTGraphParam(TFFTGraphParamID): PrivateScope, Public, HideBySig
+    StereoCut(Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    MixChannels(Boolean(HasFieldMarshal), UInt32, UInt32): PrivateScope, Public, HideBySig
+    GetVUData(Int32&, Int32&): PrivateScope, Public, HideBySig
+    GetStreamInfo(TStreamInfo&): PrivateScope, Public, HideBySig
+    GetStatus(TStreamStatus&): PrivateScope, Public, HideBySig
+    GetDynamicStreamLoad(TStreamLoadInfo&): PrivateScope, Public, HideBySig
+    EnumerateWaveOut(): PrivateScope, Public, HideBySig
+Class libZPlay.ZPlay+TCallbackFunc: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(UInt32, Int32, TCallbackMessage, UInt32, UInt32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(UInt32, Int32, TCallbackMessage, UInt32, UInt32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class SoundPlayer.PlayerForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    libZPlay.ZPlay player : Public
+Struct libZPlay.TSettingID: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    libZPlay.TSettingID sidWaveBufferSize = 1 : Public, Static, Literal, HasDefault
+    libZPlay.TSettingID sidAccurateLength = 2 : Public, Static, Literal, HasDefault
+    libZPlay.TSettingID sidAccurateSeek = 3 : Public, Static, Literal, HasDefault
+    libZPlay.TSettingID sidSamplerate = 4 : Public, Static, Literal, HasDefault
+    libZPlay.TSettingID sidChannelNumber = 5 : Public, Static, Literal, HasDefault
+    libZPlay.TSettingID sidBitPerSample = 6 : Public, Static, Literal, HasDefault
+    libZPlay.TSettingID sidBigEndian = 7 : Public, Static, Literal, HasDefault
+Struct libZPlay.TStreamFormat: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    libZPlay.TStreamFormat sfUnknown = 0 : Public, Static, Literal, HasDefault
+    libZPlay.TStreamFormat sfMp3 = 1 : Public, Static, Literal, HasDefault
+    libZPlay.TStreamFormat sfOgg = 2 : Public, Static, Literal, HasDefault
+    libZPlay.TStreamFormat sfWav = 3 : Public, Static, Literal, HasDefault
+    libZPlay.TStreamFormat sfPCM = 4 : Public, Static, Literal, HasDefault
+    libZPlay.TStreamFormat sfFLAC = 5 : Public, Static, Literal, HasDefault
+    libZPlay.TStreamFormat sfFLACOgg = 6 : Public, Static, Literal, HasDefault
+    libZPlay.TStreamFormat sfAC3 = 7 : Public, Static, Literal, HasDefault
+    libZPlay.TStreamFormat sfAacADTS = 8 : Public, Static, Literal, HasDefault
+    libZPlay.TStreamFormat sfWaveIn = 9 : Public, Static, Literal, HasDefault
+    libZPlay.TStreamFormat sfAutodetect = 1000 : Public, Static, Literal, HasDefault
+Struct libZPlay.TFFTWindow: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    libZPlay.TFFTWindow fwRectangular = 1 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTWindow fwHamming = 2 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTWindow fwHann = 3 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTWindow fwCosine = 4 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTWindow fwLanczos = 5 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTWindow fwBartlett = 6 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTWindow fwTriangular = 7 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTWindow fwGauss = 8 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTWindow fwBartlettHann = 9 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTWindow fwBlackman = 10 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTWindow fwNuttall = 11 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTWindow fwBlackmanHarris = 12 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTWindow fwBlackmanNuttall = 13 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTWindow fwFlatTop = 14 : Public, Static, Literal, HasDefault
+Struct libZPlay.TTimeFormat: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    UInt32 value__ : Public, SpecialName, RTSpecialName
+    libZPlay.TTimeFormat tfMillisecond = 1 : Public, Static, Literal, HasDefault
+    libZPlay.TTimeFormat tfSecond = 2 : Public, Static, Literal, HasDefault
+    libZPlay.TTimeFormat tfHMS = 4 : Public, Static, Literal, HasDefault
+    libZPlay.TTimeFormat tfSamples = 8 : Public, Static, Literal, HasDefault
+Struct libZPlay.TSeekMethod: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    libZPlay.TSeekMethod smFromBeginning = 1 : Public, Static, Literal, HasDefault
+    libZPlay.TSeekMethod smFromEnd = 2 : Public, Static, Literal, HasDefault
+    libZPlay.TSeekMethod smFromCurrentForward = 4 : Public, Static, Literal, HasDefault
+    libZPlay.TSeekMethod smFromCurrentBackward = 8 : Public, Static, Literal, HasDefault
+Struct libZPlay.TID3Version: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    libZPlay.TID3Version id3Version1 = 1 : Public, Static, Literal, HasDefault
+    libZPlay.TID3Version id3Version2 = 2 : Public, Static, Literal, HasDefault
+Struct libZPlay.TFFTGraphHorizontalScale: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    libZPlay.TFFTGraphHorizontalScale gsLogarithmic = 0 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphHorizontalScale gsLinear = 1 : Public, Static, Literal, HasDefault
+Struct libZPlay.TFFTGraphParamID: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    libZPlay.TFFTGraphParamID gpFFTPoints = 1 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpGraphType = 2 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpWindow = 3 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpHorizontalScale = 4 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpSubgrid = 5 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpTransparency = 6 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpFrequencyScaleVisible = 7 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpDecibelScaleVisible = 8 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpFrequencyGridVisible = 9 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpDecibelGridVisible = 10 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpBgBitmapVisible = 11 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpBgBitmapHandle = 12 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpColor1 = 13 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpColor2 = 14 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpColor3 = 15 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpColor4 = 16 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpColor5 = 17 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpColor6 = 18 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpColor7 = 19 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpColor8 = 20 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpColor9 = 21 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpColor10 = 22 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpColor11 = 23 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpColor12 = 24 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpColor13 = 25 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpColor14 = 26 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpColor15 = 27 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphParamID gpColor16 = 28 : Public, Static, Literal, HasDefault
+Struct libZPlay.TFFTGraphType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    libZPlay.TFFTGraphType gtLinesLeftOnTop = 0 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphType gtLinesRightOnTop = 1 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphType gtAreaLeftOnTop = 2 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphType gtAreaRightOnTop = 3 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphType gtBarsLeftOnTop = 4 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphType gtBarsRightOnTop = 5 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphType gtSpectrum = 6 : Public, Static, Literal, HasDefault
+Struct libZPlay.TBPMDetectionMethod: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    libZPlay.TBPMDetectionMethod dmPeaks = 0 : Public, Static, Literal, HasDefault
+    libZPlay.TBPMDetectionMethod dmAutoCorrelation = 1 : Public, Static, Literal, HasDefault
+Struct libZPlay.TFFTGraphSize: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    libZPlay.TFFTGraphSize FFTGraphMinWidth = 100 : Public, Static, Literal, HasDefault
+    libZPlay.TFFTGraphSize FFTGraphMinHeight = 60 : Public, Static, Literal, HasDefault
+Struct libZPlay.TWaveOutMapper: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    UInt32 value__ : Public, SpecialName, RTSpecialName
+    libZPlay.TWaveOutMapper WaveOutWaveMapper = 4294967295 : Public, Static, Literal, HasDefault
+Struct libZPlay.TWaveInMapper: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    UInt32 value__ : Public, SpecialName, RTSpecialName
+    libZPlay.TWaveInMapper WaveInWaveMapper = 4294967295 : Public, Static, Literal, HasDefault
+Struct libZPlay.TCallbackMessage: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    libZPlay.TCallbackMessage MsgStopAsync = 1 : Public, Static, Literal, HasDefault
+    libZPlay.TCallbackMessage MsgPlayAsync = 2 : Public, Static, Literal, HasDefault
+    libZPlay.TCallbackMessage MsgEnterLoopAsync = 4 : Public, Static, Literal, HasDefault
+    libZPlay.TCallbackMessage MsgExitLoopAsync = 8 : Public, Static, Literal, HasDefault
+    libZPlay.TCallbackMessage MsgEnterVolumeSlideAsync = 16 : Public, Static, Literal, HasDefault
+    libZPlay.TCallbackMessage MsgExitVolumeSlideAsync = 32 : Public, Static, Literal, HasDefault
+    libZPlay.TCallbackMessage MsgStreamBufferDoneAsync = 64 : Public, Static, Literal, HasDefault
+    libZPlay.TCallbackMessage MsgStreamNeedMoreDataAsync = 128 : Public, Static, Literal, HasDefault
+    libZPlay.TCallbackMessage MsgNextSongAsync = 256 : Public, Static, Literal, HasDefault
+    libZPlay.TCallbackMessage MsgStop = 65536 : Public, Static, Literal, HasDefault
+    libZPlay.TCallbackMessage MsgPlay = 131072 : Public, Static, Literal, HasDefault
+    libZPlay.TCallbackMessage MsgEnterLoop = 262144 : Public, Static, Literal, HasDefault
+    libZPlay.TCallbackMessage MsgExitLoop = 524288 : Public, Static, Literal, HasDefault
+    libZPlay.TCallbackMessage MsgEnterVolumeSlide = 1048576 : Public, Static, Literal, HasDefault
+    libZPlay.TCallbackMessage MsgExitVolumeSlide = 2097152 : Public, Static, Literal, HasDefault
+    libZPlay.TCallbackMessage MsgStreamBufferDone = 4194304 : Public, Static, Literal, HasDefault
+    libZPlay.TCallbackMessage MsgStreamNeedMoreData = 8388608 : Public, Static, Literal, HasDefault
+    libZPlay.TCallbackMessage MsgNextSong = 16777216 : Public, Static, Literal, HasDefault
+    libZPlay.TCallbackMessage MsgWaveBuffer = 33554432 : Public, Static, Literal, HasDefault
+Struct libZPlay.TWaveOutFormat: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    UInt32 value__ : Public, SpecialName, RTSpecialName
+    libZPlay.TWaveOutFormat format_invalid = 0 : Public, Static, Literal, HasDefault
+    libZPlay.TWaveOutFormat format_11khz_8bit_mono = 1 : Public, Static, Literal, HasDefault
+    libZPlay.TWaveOutFormat format_11khz_8bit_stereo = 2 : Public, Static, Literal, HasDefault
+    libZPlay.TWaveOutFormat format_11khz_16bit_mono = 4 : Public, Static, Literal, HasDefault
+    libZPlay.TWaveOutFormat format_11khz_16bit_stereo = 8 : Public, Static, Literal, HasDefault
+    libZPlay.TWaveOutFormat format_22khz_8bit_mono = 16 : Public, Static, Literal, HasDefault
+    libZPlay.TWaveOutFormat format_22khz_8bit_stereo = 32 : Public, Static, Literal, HasDefault
+    libZPlay.TWaveOutFormat format_22khz_16bit_mono = 64 : Public, Static, Literal, HasDefault
+    libZPlay.TWaveOutFormat format_22khz_16bit_stereo = 128 : Public, Static, Literal, HasDefault
+    libZPlay.TWaveOutFormat format_44khz_8bit_mono = 256 : Public, Static, Literal, HasDefault
+    libZPlay.TWaveOutFormat format_44khz_8bit_stereo = 512 : Public, Static, Literal, HasDefault
+    libZPlay.TWaveOutFormat format_44khz_16bit_mono = 1024 : Public, Static, Literal, HasDefault
+    libZPlay.TWaveOutFormat format_44khz_16bit_stereo = 2048 : Public, Static, Literal, HasDefault
+Struct libZPlay.TWaveOutFunctionality: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    UInt32 value__ : Public, SpecialName, RTSpecialName
+    libZPlay.TWaveOutFunctionality supportPitchControl = 1 : Public, Static, Literal, HasDefault
+    libZPlay.TWaveOutFunctionality supportPlaybackRateControl = 2 : Public, Static, Literal, HasDefault
+    libZPlay.TWaveOutFunctionality supportVolumeControl = 4 : Public, Static, Literal, HasDefault
+    libZPlay.TWaveOutFunctionality supportSeparateLeftRightVolume = 8 : Public, Static, Literal, HasDefault
+    libZPlay.TWaveOutFunctionality supportSync = 16 : Public, Static, Literal, HasDefault
+    libZPlay.TWaveOutFunctionality supportSampleAccuratePosition = 32 : Public, Static, Literal, HasDefault
+    libZPlay.TWaveOutFunctionality supportDirectSound = 6 : Public, Static, Literal, HasDefault

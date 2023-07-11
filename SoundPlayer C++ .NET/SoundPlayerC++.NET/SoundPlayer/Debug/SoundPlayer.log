@@ -1,0 +1,14 @@
+﻿  PlayerForm.cpp
+f:\code projects files\neww c projects 19nov\soundplayer c++\soundplayer\soundplayer\PlayerForm.h(169): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+f:\code projects files\neww c projects 19nov\soundplayer c++\soundplayer\soundplayer\PlayerForm.h(173): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+f:\code projects files\neww c projects 19nov\soundplayer c++\soundplayer\soundplayer\PlayerForm.h(177): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+f:\code projects files\neww c projects 19nov\soundplayer c++\soundplayer\soundplayer\PlayerForm.h(181): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+f:\code projects files\neww c projects 19nov\soundplayer c++\soundplayer\soundplayer\PlayerForm.h(185): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+f:\code projects files\neww c projects 19nov\soundplayer c++\soundplayer\soundplayer\PlayerForm.h(189): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+f:\code projects files\neww c projects 19nov\soundplayer c++\soundplayer\soundplayer\PlayerForm.h(193): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+f:\code projects files\neww c projects 19nov\soundplayer c++\soundplayer\soundplayer\PlayerForm.h(197): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+f:\code projects files\neww c projects 19nov\soundplayer c++\soundplayer\soundplayer\PlayerForm.h(201): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+f:\code projects files\neww c projects 19nov\soundplayer c++\soundplayer\soundplayer\PlayerForm.h(478): warning C4244: '=': conversion from 'double' to 'unsigned int', possible loss of data
+f:\code projects files\neww c projects 19nov\soundplayer c++\soundplayer\soundplayer\PlayerForm.h(489): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  .NETFramework,Version=v4.6.1.AssemblyAttributes.cpp
+  SoundPlayer.vcxproj -> F:\Code Projects Files\NEWW C Projects 19nov\SoundPlayer c++\SoundPlayer\Debug\SoundPlayer.exe
